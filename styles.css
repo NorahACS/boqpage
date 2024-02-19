@@ -1,0 +1,253 @@
+/*styles.css*/
+h2,
+h3,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Apply a background color and text color to the body */
+body {
+    background-color: #EDEDE9;
+    color: #333;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+.bold-text{
+    margin: 10px; 
+    padding: 1em;
+    font-family: 'Lora';
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the header */
+header {
+    background-color: #FFFFFF;
+    border: 2px solid #333; /* 2px width, solid style, dark gray color (#333) */
+    padding: 1em; /* Optional: Add some padding to the header */
+    color: #0D0907;
+
+}
+/* Style the centered text */
+.centered-text {
+    text-align: center;
+}
+/* Style the right-aligned text */
+.right-text {
+    text-align: right; 
+}
+
+p{
+   margin: 5px ;
+   padding: 3px; 
+}
+
+#addNewItemButton {
+    background-color: #216E8C;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addNewItemButton:hover {
+    background-color: #216E8C;
+    border: 3px solid #2B4253;
+}
+
+#searchBox {
+    background-color: #fff;
+   color: #005C7F;
+   padding: 10px;
+   border-radius: 5px;
+   width: 200px; 
+   margin-top: 10px;
+   border: 1px solid #53A6C7;
+}
+
+#exportButton {
+   background-color: #fff;
+   color: #216E8C;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-left: 600px;
+   border: 1px solid #2B4253;
+}
+
+#exportButton:hover {
+   background-color: #fff;
+   border: 3px solid #2B4253;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.customButton {
+    width: 16px; 
+    height: 16px; 
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #555; /* Close button color */
+    cursor: pointer;
+}
+
+/* Style the form fields */
+#surveyForm {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #216E8C;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #124356;
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.card {
+    position: relative;
+    width: auto;
+    height: auto;
+    background: #f7f7f7; /* Light background color */
+    border: 2px solid #ddd; /* Light border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Increased padding for better spacing */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+    margin-right: 20px;
+    font-weight: lighter;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.card label {
+    font-weight: bold;
+    color: #555; /* Darker label text color */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card p {
+    margin: 0;
+    color: #333; /* Slightly darker text color */
+}
+
+.card div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.card div label {
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card div p {
+    margin: 0;
+    color: #333;
+}
+
+.toggle-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 8px 16px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.toggle-button img{
+    position: absolute;
+    bottom: 10px;
+    right:5px ;
+    padding: 8px 16px;
+
+}
+
+ h1{
+    text-decoration: underline;
+ }
+
+ .delete-button {
+    position: absolute;
+    top: 10px;
+    right:5px ;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.delete-button img {
+    width: 20px; /* Adjust the width of the trash icon */
+}

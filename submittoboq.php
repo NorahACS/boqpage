@@ -50,11 +50,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO boq (table_number, item_number, item_description, quantity, period, origin, business_unit, unit_type, item_type)
             VALUES ('$table_number', '$item_number', '$item_description', $quantity, $period, '$origin', '$business_unit', '$unit_type', '$item_type')";
 
-    if ($conn->query($sql) === TRUE) {
+ if ($conn->query($sql) === TRUE) {
         echo json_encode(['message' => 'Inserted successfully']);
-        // Redirect to index.php after successful insertion
-        header("Location: index.php");
-        exit; // Make sure to exit after sending the Location header
+
+        // Check if headers are not sent
+        if (!headers_sent()) {
+            // Redirect to index.php after successful insertion
+            header("Location: index.php");
+            exit; // Make sure to exit after sending the Location header
+        } else {
+            echo json_encode(['error' => 'Headers already sent. Unable to redirect.']);
+        }
     } else {
         echo json_encode(['error' => 'Error inserting data into the database: ' . $conn->error, 'query' => $sql]);
     }
